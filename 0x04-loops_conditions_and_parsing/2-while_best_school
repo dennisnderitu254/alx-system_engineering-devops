@@ -11,6 +11,7 @@
 #8. The eighth line of the script is a command that increments the value of count by 1.
 #9. The ninth line of the script is a command that outputs the value of count.
 #10. The tenth line of the script is a command that increments the value of count by 1.
+
 count=1
 
 while [ $count -le 10 ]
