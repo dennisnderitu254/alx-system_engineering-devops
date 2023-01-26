@@ -1,0 +1,5 @@
+This script uses a for loop to iterate 10 times, and each iteration it prints the string "Best School" to the console.
+
+The script starts with the line #!/bin/bash which is called shebang, it tells the system that this script is written in bash.
+
+You can make the script executable by running chmod +x 1-for_best_school and run it by typing ./1-for_best_school
