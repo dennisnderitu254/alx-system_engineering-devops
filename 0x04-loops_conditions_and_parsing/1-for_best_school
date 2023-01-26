@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 #Bash script that displays Best School 10 times
+
+#1. The for loop is executed 10 times.
+#2. The echo command is executed 10 times.
+#3. The echo command is executed 10 times.
+#4. The echo command is executed 10 times.
+#5. The echo command is executed 10 times.
+#6. The echo command is executed 10 times.
+#7. The echo command is executed 10 times.
+#8. The echo command is executed 10 times.
+#9. The echo command is executed 10 times.
+#10. The echo command is executed 10 times.
+
 for _ in {1..10}
 do
     echo "Best School"
