@@ -1,0 +1,5 @@
+This script uses a while loop to iterate 10 times, and each iteration it prints the string "Best School" to the console.
+The variable count is initialized to 1, and the while loop continues to run as long as count is less than or equal to 10.
+The count variable is incremented by 1 at the end of each iteration using the count=$((count+1)) command.
+The script starts with the line #!/bin/bash which is called shebang, it tells the system that this script is written in bash.
+You can make the script executable by running chmod +x scriptname.sh and run it by typing ./scriptname.sh
