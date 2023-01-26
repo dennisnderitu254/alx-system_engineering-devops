@@ -5,19 +5,6 @@
 -   Weight: 1
 
 
-#### In a nutshell...
-
-
-About Bash projects
--------------------
-
-Unless stated, all your projects will be auto-corrected with Ubuntu 20.04 LTS.
-
-Background Context
-------------------
-
-[![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/6/b07e3333b1edfb9beed5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20220115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220115T182752Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=9d73d141cd49b81a0d81762b039e1c7d35276c1485e253db49676853cd7426f2)](https://youtu.be/BC2neyc5GcI)
-
 Resources
 ---------
 
