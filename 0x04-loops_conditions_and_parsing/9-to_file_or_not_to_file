@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
 # displays information about the School file
 
-#1. The first if statement checks to see if the file exists.
-#2. The second if statement checks to see if the file is empty.
-#3. The third if statement checks to see if the file is a regular file.
-filename="School"
+#!/usr/bin/env bash
+# Displays information about the file `school`.
 
-if [ -e $filename ]
+#1. The first if statement checks to see if the file “school” exists.
+#2. If it does, it checks to see if the file is empty.
+#3. If it is not empty, it prints a message saying that the file is not empty.
+#4. If it is empty, it prints a message saying that the file is empty.
+#5. If the file does not exist, it prints a message saying that the file does not exist.
+if [ -e "school" ]
 then
-    echo "School file exists"
-    if [ -s $filename ]
-    then
-        echo "School file is not empty"
-    else
-        echo "School file is empty"
-    fi
-    if [ -f $filename ]
-    then
-        echo "School is a regular file"
-    fi
+  echo "school file exists"
+  if [ -s "school" ]
+  then
+    echo "school file is not empty"
+  else
+    echo "school file is empty"
+  fi
+
+  if [ -f "school" ]
+  then
+    echo "school is a regular file"
+  fi
 else
-    echo "School file does not exist"
+  echo "school file does not exist"
 fi
