@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Displays the time for 12 hours and 59 minutes
+#1. The while loop is used to iterate through the hours of the day.
+#2. The while loop is nested within the outer while loop.
+#3. The inner while loop is used to iterate through the minutes of the hour.
+#4. The inner while loop is nested within the outer while loop.
+#5. The inner while loop is used to iterate through the seconds of the minute.
+#6. The inner while loop is nested within the outer while loop.
+#7. The inner while loop is used to iterate through the hours of the day.
+#8. The inner while loop is nested within the outer while loop.
+#9. The inner while loop is used to iterate through the minutes of the hour.
+#10. The inner while loop is nested within the outer while loop.
+#11. The inner while loop is used to iterate through the seconds of the minute.
+#12. The inner while loop is nested within the outer while loop.
+hour=0
+
+while [ $hour -le 12 ]
+do
+    echo "Hour: $hour"
+    minute=1
+    while [ $minute -le 59 ]
+    do
+        echo $minute
+        minute=$(( minute + 1 ))
+    done
+    hour=$(( hour + 1 ))
+done
