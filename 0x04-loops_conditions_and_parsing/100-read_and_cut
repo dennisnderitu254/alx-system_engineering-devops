@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Displays the contents of the file `/etc/passwd`.
+#   Only displays the username, user id, and user home directory path.
+
+#1. Reads the /etc/passwd file line by line.
+#2. For each line, it splits the line into fields using the colon (:) as the delimiter.
+#3. It then prints the first, third, and sixth fields.
+
+while read -r passwd; do
+  echo "$passwd" | cut -d ':' -f1,3,6
+done < "/etc/passwd"
