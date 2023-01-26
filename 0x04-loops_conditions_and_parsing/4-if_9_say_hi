@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #Write a Bash script that displays Best School 10 times, but for the 9th iteration, displays Best School and then Hi on a new line
+#It prints out the phrase "Best School" 10 times.
 n=1
 
 while [ $n -le 10 ]
