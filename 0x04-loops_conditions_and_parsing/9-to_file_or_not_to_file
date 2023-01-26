@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# displays information about the School file
+
+#1. The first if statement checks to see if the file exists.
+#2. The second if statement checks to see if the file is empty.
+#3. The third if statement checks to see if the file is a regular file.
+filename="School"
+
+if [ -e $filename ]
+then
+    echo "School file exists"
+    if [ -s $filename ]
+    then
+        echo "School file is not empty"
+    else
+        echo "School file is empty"
+    fi
+    if [ -f $filename ]
+    then
+        echo "School is a regular file"
+    fi
+else
+    echo "School file does not exist"
+fi
