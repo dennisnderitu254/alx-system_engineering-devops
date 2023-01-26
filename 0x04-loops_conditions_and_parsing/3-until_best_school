@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # Write a Bash script that displays Best School 10 times using the until loop
 
+#1. The until loop executes the commands inside it as long as the condition is true.
+#2. The condition is checked at the end of each loop iteration.
+#3. If the condition is true, the commands inside the loop are executed.
+#4. If the condition is false, the loop is terminated.
 count=1
 until [ $count -gt 10 ]
 do
