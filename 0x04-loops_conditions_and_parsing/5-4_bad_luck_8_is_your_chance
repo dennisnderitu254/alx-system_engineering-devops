@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 # This script prints "bad luck" 4th iteration, "good luck" on the 8th iteration, and "Best School" for other iterations
+#1. The first line of the script is a comment that explains what the script does.
+#2. The second line of the script is a shebang line that tells the shell to use the bash interpreter to run the script.
+#3. The third line of the script is a variable assignment that tells the shell to set the variable n to 1.
+#4. The fourth line of the script is a while loop that will execute as long as the value of n is less than or equal to 10.
+#5. The fifth line of the script is an if statement that checks if n is equal to 4.
+#6. The sixth line of the script is an if statement that checks if n is equal to 8.
+#7. The seventh line of the script is an if statement that checks if n is not equal to 4 or 8.
+#8. The eighth line of the script is an assignment statement that increments the value of n by 1.
+#9. The ninth line of the script is an echo statement that displays the value of n.
+#10. The tenth line of the script is an echo statement that displays the value of n.
 n=1
 
 while [ $n -le 10 ]

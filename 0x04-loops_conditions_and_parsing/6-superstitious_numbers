@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# This script prints "bad luck" 4th iteration, "good luck" on the 8th iteration, and "Holberton School" for other iterations
+#1. The first line of the script is a comment that explains what the script does.
+#2. The second line of the script is a variable assignment that sets the variable n to 1.
+#3. The third line of the script is a while loop that executes as long as the value of n is less than or equal to 20.
+#4. The fourth line of the script is an if-then statement that executes if the value of n is equal to 4.
+#5. The fifth line of the script is an echo statement that displays the value of n.
+#6. The sixth line of the script is an if-then statement that executes if the value of n is equal to 9.
+#7. The seventh line of the script is an echo statement that displays the value of n.
+#8. The eighth line of the script is an if-then statement that executes if the value of n is equal to 17.
+#9. The ninth line of the script is an echo statement that displays the value of n.
+#10. The tenth line of the script is an if-then statement that executes if the value of n is not equal to 4, 9, or 17.
+#11. The eleventh line of the script is an echo statement that displays the value of n.
+#12. The twelfth line of the script is an assignment statement that sets the value of n to n plus 1.
+#13. The thirteenth line of the script is an end-of-loop statement that terminates the while loop.
+n=1
+
+while [ $n -le 20 ]
+do
+    echo $n
+    case $n in
+        4)
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "bad luck from Italy"
+            ;;
+        *)
+            ;;
+    esac
+    n=$(( n + 1 ))
+done
