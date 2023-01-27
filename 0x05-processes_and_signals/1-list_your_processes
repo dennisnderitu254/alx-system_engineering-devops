@@ -4,4 +4,4 @@
 #+  which might not have a TTY.
 
 #It shows all the processes running on the system.
-ps -a uf
+ps -auxf
