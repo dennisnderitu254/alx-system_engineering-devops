@@ -7,18 +7,24 @@
 #   Deletes the file /var/run/myscript.pid and terminates upon
 #+  receiving a SIGQUIT or SIGTERM.
 
-terminator() {
-  rm /var/run/myscript.pid
-  exit
-}
 
-echo "$$" > /var/run/myscript.pid
+file="/var/run/myscript.pid"
 
-while true
-do
+if [ ! -e "$file" ]; then
+  touch "$file"
+fi
+
+sleep 2 &
+
+echo "$!" > "$file"
+
+# prints I hate the kill command, deletes the file and exits  when receiving a SIGTERM or SIGQUIT signal
+trap 'echo "I hate the kill command"; rm "$file"; exit' SIGTERM SIGQUIT
+
+# prints Y U no love me?! when receiving a SIGINT signal
+trap "echo Y U no love me?!" SIGINT
+
+while true; do
   echo "To infinity and beyond"
   sleep 2
-  trap 'echo "Y U no love me?!"' SIGINT
-  trap 'echo "I hate the kill command" && terminator' SIGTERM
-  trap 'terminator' SIGQUITgit 
 done
