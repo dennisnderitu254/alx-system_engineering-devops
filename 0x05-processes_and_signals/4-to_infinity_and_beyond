@@ -2,6 +2,10 @@
 # Display "To infinity and beyond" indefinetely with
 #+ a sleep 2 in between each iteration
 
+#1. The while loop is a loop that executes a block of code while a condition is true.
+#2. The true command is a command that always returns true.
+#3. The echo command prints a string to the terminal.
+#4. The sleep command pauses the script for a specified number of seconds.
 while true
 do
     echo "To infinity and beyond"
