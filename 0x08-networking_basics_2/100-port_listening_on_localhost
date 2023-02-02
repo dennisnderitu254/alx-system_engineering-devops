@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Listens on port 98 on localhost.
+# This script uses the nc (netcat) command to listen on port 98 on the localhost (-l flag).
+# When this script is executed, it will wait for a connection on port 98. When a connection is
+# made, any data received will be displayed on the console. To test this script, you can use
+# another terminal window to connect to the port:
+
+nc -l localhost 98
