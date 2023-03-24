@@ -20,6 +20,7 @@
 
 ## Tasks
 
+`ssh ubuntu@3.84.158.113 -v`
 <details>
 <summary><a href="./0-use_a_private_key">0. Use a private key</a></summary><br>
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/yW4gBSpM/image.png' border='0' alt='image'/></a>
