@@ -177,6 +177,12 @@ In this example, I:
 
 That is one way of publishing your website pages to your server.
 
+- How I did it `./0-transfer_file /home/nderitu/Documents/htmlfile/some_page.html IP_ADDRESS ubuntu /home/ubuntu/.ssh`
+
+### Result
+
+- `some_page.html                                     100%   12     0.1KB/s   00:00`
+
 **Repo:**
 
 - GitHub repository: `alx-system_engineering-devops`
