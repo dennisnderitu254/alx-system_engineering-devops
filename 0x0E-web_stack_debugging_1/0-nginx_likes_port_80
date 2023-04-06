@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# what’s keeping my Ubuntu container’s Nginx installation from listening on port 8?
+# configures nginx to run and listen to port 80
+# Nginx must be running, and listening on port 80 of all the server’s active IPv4 IPs
+# Write a Bash script that configures a server to the above requirements
+
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
