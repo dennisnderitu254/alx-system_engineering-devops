@@ -121,6 +121,24 @@ Requirements:
 - Directory: `0x13-firewall`
 - File: `0-block_all_incoming_traffic_but`
 
+```
+SOLUTION
+
+#!/usr/bin/env bash
+#Configures a ufw firewall to block all incoming traffic
+#except for TCP ports 22, 443 and 80.
+apt-get install ufw
+sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
+ufw disable
+ufw enable
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw allow 80/tcp
+
+```
+
  Done? Help Check your code
 
 ### 1\. Port forwarding
