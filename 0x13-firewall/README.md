@@ -139,6 +139,42 @@ ufw allow 80/tcp
 
 ```
 
+```
+This is a bash script that is used to configure the UFW firewall on a Linux-based system. Here is an explanation of each line:
+
+#!/usr/bin/env bash
+This line is known as the shebang and it specifies the interpreter that should be used to run the script. In this case, the interpreter is Bash.
+
+apt-get install ufw
+This line installs the UFW (Uncomplicated Firewall) package using the apt-get package manager.
+
+sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
+This line uses the sed command to modify the /etc/default/ufw configuration file. Specifically, it changes the IPV6 variable from its default value to yes, which enables IPv6 support.
+
+ufw disable
+This line disables UFW, which is necessary before making any changes to the firewall rules.
+
+ufw enable
+This line enables UFW after making the necessary changes.
+
+ufw default deny incoming
+This line sets the default incoming policy to deny, which means that all incoming traffic will be blocked unless there is a specific rule allowing it.
+
+ufw default allow outgoing
+This line sets the default outgoing policy to allow, which means that all outgoing traffic will be allowed unless there is a specific rule blocking it.
+
+ufw allow 22/tcp
+This line allows incoming TCP traffic on port 22, which is commonly used for SSH (Secure Shell) connections.
+
+ufw allow 443/tcp
+This line allows incoming TCP traffic on port 443, which is commonly used for HTTPS (HTTP Secure) connections.
+
+ufw allow 80/tcp
+This line allows incoming TCP traffic on port 80, which is commonly used for HTTP (Hypertext Transfer Protocol) connections.
+
+Overall, this script configures the UFW firewall to block all incoming traffic by default, except for traffic on TCP ports 22, 443, and 80, which are commonly used for SSH, HTTPS, and HTTP, respectively. It also enables IPv6 support and allows all outgoing traffic.
+```
+
  Done? Help Check your code
 
 ### 1\. Port forwarding
