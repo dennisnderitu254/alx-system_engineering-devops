@@ -198,6 +198,29 @@ None
 
  Done? Help Check your code
 
+```
+Solution
+
+The provided code implements a recursive function recurse() that queries the Reddit API and returns a list containing the titles of all hot articles for a given subreddit. It follows the requirements mentioned earlier.
+
+The function takes the subreddit as the main argument and supports optional parameters for pagination: after, count, and hot_list.
+
+The function starts by constructing the URL for the API request, including the subreddit name. It sets the custom User-Agent header to avoid any issues with rate limiting.
+
+The function sends a GET request to the API endpoint with the appropriate parameters for pagination (after, count, and limit). It handles the possibility of a subreddit not found (404 error) by returning None.
+
+If the response is successful, the function extracts the relevant data from the JSON response, including the after value for the next page, the number of posts retrieved (count), and the list of posts.
+
+The function iterates over the posts and appends their titles to the hot_list.
+
+If there are more pages available (after is not None), the function makes a recursive call to recurse() with the updated pagination parameters.
+
+Finally, when there are no more pages available, the function returns the hot_list containing all the post titles.
+
+The code is well-structured and implements the recursive approach required to retrieve all hot post titles.
+
+```
+
 ### 3\. Count it
 
 # advanced
