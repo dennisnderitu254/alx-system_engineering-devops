@@ -277,3 +277,17 @@ bob@dylan $
 - GitHub repository: `alx-system_engineering-devops`
 - Directory: `0x16-api_advanced`
 - File: `100-count.py`
+
+```
+Solution
+
+The provided code implements a function count_words that queries the Reddit API, parses the title of all hot articles, and prints a sorted count of given keywords. It follows the requirements mentioned earlier.
+
+The function first defines an add_title helper function that iterates over the hot posts, extracts the titles, and checks if any of the keywords are present in the title. If a keyword is found, it increments the count in the provided dictionary.
+
+The recurse function is the recursive part that queries the Reddit API and retrieves the hot posts. It constructs the API URL, sends a GET request with the appropriate headers and parameters, and checks if the response is successful. If the response is successful, it extracts the hot posts from the JSON response and calls the add_title function to update the keyword counts. It also retrieves the after value to handle pagination and makes a recursive call to retrieve the next page if there is one.
+
+The count_words function is the entry point that initializes the keyword dictionary, calls the recurse function to retrieve and process the hot posts, sorts the keyword counts in descending order, and prints the results in the desired format.
+
+Overall, the code implements the recursive approach required to query the Reddit API, parse the titles, and count the given keywords. It then prints the keyword counts in the specified format.
+```
