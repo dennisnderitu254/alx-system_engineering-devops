@@ -81,7 +81,7 @@ Please, remember that these blogs must be written in English to further your tec
 
 Save
 
-1. <https://docs.google.com/document/d/1beyDFpjU8GusqktPl5HFL5w0QDX9o_EshMMz79TovKc/edit?usp=sharing>
+<https://docs.google.com/document/d/1beyDFpjU8GusqktPl5HFL5w0QDX9o_EshMMz79TovKc/edit?usp=sharing>
 
 ```
 SOLUTION
@@ -90,11 +90,11 @@ Title: DevOps Incident Postmortem: Docker Container Outage
 
 Issue Summary:
 Duration: 2 hours, from 2023-05-11 14:00 UTC to 2023-05-11 16:00 UTC.
-Impact: The containerized service "XYZ" experienced a complete outage during the incident. Users were unable to access the service, resulting in a 100% service disruption. User experience was severely affected, with all users unable to perform any actions within the application.
+Impact: The containerized service "NdechSystemz" experienced a complete outage during the incident. Users were unable to access the service, resulting in a 100% service disruption. User experience was severely affected, with all users unable to perform any actions within the application.
 
 Timeline:
 
-2023-05-11 14:00 UTC: The issue was detected when the monitoring system triggered an alert for the unavailability of the "XYZ" service.
+2023-05-11 14:00 UTC: The issue was detected when the monitoring system triggered an alert for the unavailability of the "NdechSystemz" service.
 Investigation began immediately after receiving the alert.
 
 Initially, the investigation focused on network connectivity issues and Docker host health checks as possible root causes.
@@ -115,12 +115,15 @@ Improvements/Fixes:
 Enhance monitoring capabilities to include detailed health checks and alerts specifically for container startup failures.
 Implement stricter testing and validation processes for container orchestration platform updates to catch potential configuration issues before deployment.
 Establish clear communication channels and escalation paths within the team to ensure timely incident response.
+
 Tasks:
 
 Update monitoring system to include container startup checks for critical services.
 Review and enhance testing procedures for future container orchestration platform updates.
+
 Conduct a post-incident review meeting with the team to identify lessons learned and document best practices.
 Develop a comprehensive incident response plan, including clear roles and responsibilities for each team member.
+
 In conclusion, the Docker container outage was caused by a misconfiguration introduced during a recent update to the container orchestration platform. The incident was promptly detected by the monitoring system, and investigation efforts were initiated. Misleading paths were explored before identifying the root cause. The incident was escalated to higher levels, and a rollback of the configuration change resolved the issue. To prevent similar incidents in the future, monitoring capabilities will be enhanced, testing procedures will be strengthened, and a comprehensive incident response plan will be developed and implemented.
 
 By following these corrective measures, we aim to improve the stability and reliability of our containerized services, ensuring uninterrupted access for our users.
@@ -145,6 +148,8 @@ Make your post-mortem attractive by adding humour, a pretty diagram or anything 
 Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
 
 #### Add URLs here
+
+<https://docs.google.com/document/d/1beyDFpjU8GusqktPl5HFL5w0QDX9o_EshMMz79TovKc/edit?usp=sharing>
 
 **Repo:**
 
