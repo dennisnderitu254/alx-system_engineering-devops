@@ -164,3 +164,51 @@ root@0a62aa706eb3:/#
 - GitHub repository: `alx-system_engineering-devops`
 - Directory: `0x1B-web_stack_debugging_4`
 - File: `0-the_sky_is_the_limit_not.pp`
+
+```
+SOLUTION
+
+# Increases the amount of traffic an Nginx server can handle
+
+# Increase the ULIMIT of the default file
+exec { 'fix--for-nginx':
+  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+  path    => '/usr/local/bin/:/bin'
+}
+
+#restart Nginx
+
+exec { 'nginx-restart':
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
+}
+```
+
+- The provided Puppet manifest increases the ULIMIT value for the default file and restarts Nginx to allow it to handle more traffic.
+- Here's a breakdown of the manifest:
+
+```
+Increase ULIMIT value:
+
+exec { 'fix--for-nginx':
+  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+  path    => '/usr/local/bin/:/bin'
+}
+
+```
+
+This `exec` block uses the `sed` command to modify the `/etc/default/nginx` file. It replaces the existing ULIMIT value of `15` with `4096`. This change allows Nginx to handle more file descriptors and potentially handle higher traffic.
+
+```
+Restart Nginx:
+
+exec { 'nginx-restart':
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
+}
+
+```
+
+This `exec` block restarts the Nginx service. The command `nginx restart` is executed, and the path `/etc/init.d/` is specified to ensure the correct location of the Nginx service script.
+
+By increasing the ULIMIT value and restarting Nginx, the intent is to enhance the server's capacity to handle a larger amount of traffic effectively.
