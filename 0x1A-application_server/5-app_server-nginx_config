@@ -1,3 +1,23 @@
+##
+# You should look at the following URL's in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# https://www.nginx.com/resources/wiki/start/
+# https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+# https://wiki.debian.org/Nginx/DirectoryStructure
+#
+# In most cases, administrators will remove this file from sites-enabled/ and
+# leave it as reference inside of sites-available where it will continue to be
+# updated by the nginx packaging team.
+#
+# This file will automatically load configuration files provided by other
+# applications, such as Drupal or Wordpress. These applications will be made
+# available underneath a path with that package name, such as /drupal8.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
@@ -29,20 +49,20 @@ server {
         	proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
     	}
 
-    # Serve API on AirBnB_clone_v3
-    location /api {
-        proxy_pass http://127.0.0.1:5002/api;
-    }
+	# Serve API on AirBnB_clone_v3
+    	location /api {
+        	proxy_pass http://127.0.0.1:5002/api;
+    	}
 
-    # Configure /2-hbnb route of AirBnB_clone_v4 as root location
-    location / {
-        proxy_pass http://127.0.0.1:5003/2-hbnb;
-    }
+	# Configure /2-hbnb route of AirBnB_clone_v4 as root location
+    	location / {
+        	proxy_pass http://127.0.0.1:5003/2-hbnb;
+    	}
 
-    # Serve static content for AirBnB_clone_v4
-    location /static {
-        proxy_pass http://127.0.0.1:5003;
-    }
+    	# Serve static content for AirBnB_clone_v4
+    	location /static {
+        	proxy_pass http://127.0.0.1:5003;
+    	}
 
 	# include snippets/snakeoil.conf;
 
@@ -90,3 +110,23 @@ server {
 	#	deny all;
 	#}
 }
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#	listen 80;
+#	listen [::]:80;
+#
+#	server_name example.com;
+#
+#	root /var/www/example.com;
+#	index index.html;
+#
+#	location / {
+#		try_files $uri $uri/ =404;
+#	}
+#}
